@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta cities="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const lista = ["BLÅ","RÖD","GRÖN","vit","grå"]
+        console.log(lista)
+        lista[lista.length] = "lime"
+        console.log(lista)
+        lista.splice(2,1)
+        console.log(lista)
+
+        const cities = ["Göteborg","Jönköpin","Nyköping","Skövde","Uppsala"];
+        cities.unshift("Brumsby");
+        console.log(cities)
+
+        cities.splice(lista.length,1)
+        console.log(cities)
+
+        cities[cities.length] = "Kisa";
+        console.log(cities);
+
+        cities.unshift("göteborg")
+
+    </script>
+</body>
+</html>

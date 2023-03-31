@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        <label for="fname">Name: </label>
+        <input type="text" name="fname" id="fname"><br>
+        <input type="text" name="lname" id="lname"><br>
+        <input type="text" name="age" id="age"><br>
+        <input type="text" name="email" id="email"><br>
+        <input type="text" name="mobilePhone" id="mobilePhone"><br>
+        <input type="button" value="submit" onclick="fValue(3)">
+
+    </form>
+
+    <form id="radios">
+        <label for="tek">Vilka gymnasie linjer gillar du? 1.tek 2.nat 3.eko</label><br>
+        <input type="radio" name="alternativ" id="tek"><br>
+        <input value="nat" type="radio" name="alternativ" id="nat"><br>
+        <input value="eko" type="radio" name="alternativ" id="eko"><br>
+
+
+        <input type="button" value="submit" onclick="radioSelector()">
+    </form>
+
+    <p id="gymLinjer"></p>
+    <script>
+        
+        function radioSelector(){
+            var tek = document.forms["radios"]["tek"].value;
+            var nat = document.forms["radios"]["nat"].value;
+            var eko = document.forms["radios"]["eko"].value;
+            var element = document.getElementById("gymLinjer");
+            var allVal = eko + " " + nat + " "+eko
+            var val = document.querySelector('input[name="alternativ"]:checked');
+        }
+        function fValue(){
+           var tek = document.forms["myForm"]["tek"].value;
+            alert(tek)
+           var fname = document.forms["myForm"]["fname"].value;
+           var lname = document.forms["myForm"]["lname"].value;
+           var age = document.forms["myForm"]["age"].value;
+           var email = document.forms["myForm"]["email"].value;
+           var mobilePhone = document.forms["myForm"]["mobilePhone"].value;
+            
+           let allInfo = fname +" "+ lname+" " + age+" " + email+" " + mobilePhone;
+           if (fname + lname + age + email + mobilePhone != ""){
+                if (age > 18 && age < 58){
+                    alert("Du skrev " + allInfo);
+  
+                }
+                else{
+                    alert("Tyvärr du är inte tillräckligt gammal")
+                }
+           }
+           else{
+            alert("Skriv ditt namn tack!😋")
+           }
+        }
+        
+    </script>
+</body>
+</html>

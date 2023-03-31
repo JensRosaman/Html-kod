@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        let grader = 15;
+        let omgång = 0;
+ 
+        function bildRotera(rotation){
+            
+            rotation = Number(grader)
+            rotation = grader + 1
+            rotation = String(grader)
+
+            let transformation = 'rotate(' + grader + 'deg)'
+            const rotera = document.getElementById('bild');
+            rotera.style.transform = transformation ;
+            
+            }
+            
+        function anropare(){
+            let rotation = grader
+            for(let i in Range(5)){
+                setTimeout(bildRotera(rotation),1000)
+                rotation += 1
+            }
+
+        
+        }
+    </script>
+    <div>
+        <img src="key.png" id="bild">¨
+        <button onclick="anropare()">Klicka</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Välkommen</h1>
+    <p id="demo">hej 21C</p>
+    <img src="key.png" id="img">
+    <p1 id="pp">Bing bong ding dong</p1>
+    <button onclick="hello()">Tryck på mig</button>
+    <br>
+    <button onclick="document.getElementById('pp').innerHTML='Håller med'">wow en til knapp</button>
+
+    <script>
+        document.getElementById("demo").innerHTML="wow ny text från js";
+        
+        var bild = document.getElementById("img");
+        bild.src="key2.png"
+     
+        function hello() {
+            document.getElementById("heading").innerHTML="Wow ny text";
+                }
+        
+
+
+
+    </script>
+
+</body>
+</html>
