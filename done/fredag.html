@@ -8,12 +8,14 @@
 </head>
 <body>
     <script>
-        function matte(){
-           let num1 = parseInt(prompt("Skriv tal 1"))
-           let num2 = parseInt(prompt("Skriv tal 2"))
+        function matte(num1,num2){
            alert("Summan blir " + num1 * num2)
 
         }
+
+        let num1 = parseInt(prompt("Skriv tal 1"))
+        let num2 = parseInt(prompt("Skriv tal 2"))
+        matte(num1,num2)
 
         function biggestNum(){
             let num1 = parseInt(prompt("Skriv tal 1"))
@@ -28,7 +30,7 @@
             return num2
            }
         }
-
+        
         function FtoC(){
             let celsius = parseInt(prompt("skriv in celsius"));
             let fahrenheit = celsius * 9 / 5 + 35;
@@ -42,9 +44,7 @@
             let name = promt("Vad heter du?")
             return "Hej",name
         }
-        alert(greeting())
-
-
+        
     </script>
     
     <button onclick="FtoC()">Celcius till fahrenheit</button>
