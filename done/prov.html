@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test">test</h1>
+    <p id="demo">o</p>
+
+    <form id="form">
+        <input id="input" name="namn" type="text">
+        <button type="submit" onmouseover="formulär()" id="knapp">Submit</button>
+    </form>
+
+    <script>
+        
+        //1
+        const test = document.getElementById("test");
+        test.style.color = "red"
+        //2
+        
+        function visaHej(){
+           const element = document.getElementById("demo")
+           element.innerHTML = "Hej"
+        };
+        visaHej();
+
+        //3
+        function dubblaLista(lista){
+            const TotProdukt = []
+            lista.forEach(tal => {
+                let produkt = tal * 5
+                TotProdukt[TotProdukt.length] = produkt
+            });
+            return TotProdukt
+        };
+        console.log("den dubllade listan blir: " + dubblaLista([1,2,3,4,5,6,7]));
+
+
+        //4
+        function multiplikation(tal1,tal2){
+            return tal1 * tal2
+        };
+        console.log("svaret på multiplikationen är " + multiplikation(5,5));
+
+        //5
+        function formulär(){
+            const text = document.getElementById("knapp");
+            
+            console.log(text.textContent)
+            
+        };
+    </script>
+</body>
+</html>
