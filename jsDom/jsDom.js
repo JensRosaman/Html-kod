@@ -2,9 +2,9 @@
 const vibes = document.querySelector("#vibes");
 const img = document.querySelector("#img1");
 const header = document.getElementById("header");
-const hiddenDiv = document.querySelector(".hidden");
+const container = document.getElementById("container");
 const thanksDiv = document.querySelector(".thanks");
-
+const thxMsg = document.getElementById("thxMsg");
 // Hitta knappar på sidan
 const showHideBtn = document.querySelector(".show-hide");
 const changePicBtn = document.querySelector(".change-pic");
@@ -83,45 +83,50 @@ function toggleTime() {
   }
 }
 
-function changeHeader() {
-  const newHeader = prompt("Skriv in en ny rubrik");
-  if (newHeader !== null && newHeader !== "") {
-    vibes.textContent = newHeader;
-  }
-}
+
 
 function toggleHeader() { // Centerar/ocenterar de element längst upp in i headern
-  const thxMsg = document.getElementById("thxMsg");
+
   // Kollar om användaren redan tryck på knappen
   if (header.style.alignContent !== "center") {
+    // lägger till style element som krävs för att skapa headern
     header.style.alignItems = "center";
     header.style.alignContent = "center";
     header.style.justifyContent = "center";
     header.style.flexDirection = "column";
     header.style.background = "blue";
+    header.style.width = "99vw";
     thxMsg.textContent = "Tack för att du besöker min sida";
     img.style.border = "0.5vw solid green";
+    container.style.top = "65vh";
+
   } else {
+    // gör tillbaka headern till sin defualt style
     header.style.alignItems = "";
     header.style.alignContent = "";
     header.style.justifyContent = "";
     header.style.flexDirection = "column";
+
+    // matchar top diven med backgrunden
     header.style.background = document.body.style.background;
+    header.style.width = "";
     thxMsg.textContent = "";
     img.style.border = "";
+    container.style.top = "50vh";
+
   }
 }
 
 function removeHeader() {
   header.remove();
+  thxMsg.remove()
 }
 
 function showHeader() {
   document.body.prepend(header);
+  document.body.prepend(thxMsg)
 }
 
-function toggleThanks() {
-  thanksDiv.classList.toggle("hidden");
-}
+
 
 
