@@ -5,33 +5,31 @@
 	<link rel="stylesheet" type="text/css" href="jsDom.css">
 </head>
 <body>
-	<div id="header">
-		<h1 id="vibes"></h1>
-		<p id="time"></p>
-		<img id="img1" src="https://preview.redd.it/akiinn6djtd21.jpg?auto=webp&s=52cd4cd252e44b0c06e80d190edb032e39492a76">
+	<div id="outerContainer">
+		<div id="header">
+			<h1 id="vibes"></h1>
+			<p id="time"></p>
+			<img id="img1" src="https://preview.redd.it/akiinn6djtd21.jpg?auto=webp&s=52cd4cd252e44b0c06e80d190edb032e39492a76">
 
-	</div>
-	<main id="main">
+		</div>
+		
 		<div id="container">
 			<img id="picture">
 			<button class="button" onclick="changeBg()">Byt bakgrundsfärg</button>
 			<button class="button" onclick="changeImg()">Byt bild</button>
-			<button class="button" onclick="createHeader()">Header</button>
+			<button class="button" onclick="toggleHeader()">Header</button>
 			<button class="button" onclick="toggleVibes()">Goa vibbar</button>
 			<button class="button" onclick="hideImg()">Dölj bild</button>
 			<button class="button" onclick="removeHeader()">Ta bort header</button>
 			<button class="button" onclick="toggleTime()">Tid</button>
 			<button class="button" onclick="showImg()">Visa bild</button>
-			<button class="button" onclick="showHeader()">Visa Header</button>
+			<button class="button" onclick="showHeader()">Visa Header</button>	
 		</div>
-	</main>
 
-	<footer>
-		<div id="hidden-div">
-			<p>Tack för att du besöker min sida</p>
-		</div>
-		<div id="show-div-div">Visa dold div</div>
-	</footer>
+		
+		<p id="thxMsg"></p>
+	</div>
+
 	<script src="jsDom.js"></script>
 
 </body>
