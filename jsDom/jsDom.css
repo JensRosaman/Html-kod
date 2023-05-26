@@ -1,12 +1,23 @@
 
 
-  
+
 #img1{
   width: 10vw;
   height: 10vw;
   src: url("https://preview.redd.it/akiinn6djtd21.jpg?auto=webp&s=52cd4cd252e44b0c06e80d190edb032e39492a76");
 }
-  
+
+#header{
+  display: flex;
+  width: 100vw;
+  height: auto;
+  align-content:center;
+}
+#main{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
 .button{
   flex: 0 0 calc((100% / 3) - 30px); 
   background-color: cyan;
@@ -15,16 +26,21 @@
   border: 1px solid gray;
   text-align: center;
   transition: background-color 0.3s ease;
+  width: 15vh;
+  height: 10vh;
+  font-size: 70%;
+  border-radius: 2vh;
 
+  
 }
 /* skapar on hover effect */
 .button:hover{
   background-color: violet;
 }
 #container{
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  flex-direction: column-reverse;
+  flex-direction:row ;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: beige;
@@ -33,6 +49,7 @@
   top: 50vh;
   left: 50vw;
   width: 35vw;
-  height: 35vh;
+  height: 45vh;
   transform: translate(-50%, -50%);
+  border-radius: 1vh;
 }

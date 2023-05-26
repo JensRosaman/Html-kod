@@ -1,8 +1,9 @@
 
 
 // Hitta element på sidan
-const header = document.querySelector("h1");
+const vibes = document.querySelector("#vibes");
 const img = document.querySelector("#img1");
+const header = document.getElementById("header")
 const hiddenDiv = document.querySelector(".hidden");
 const thanksDiv = document.querySelector(".thanks");
 
@@ -18,11 +19,17 @@ const removeHeaderBtn = document.querySelector(".remove-header");
 const showHeaderBtn = document.querySelector(".show-header");
 
 // Funktioner för att ändra sidans innehåll
-function toggleHidden() {
-  hiddenDiv.classList.toggle("hidden");
+function hideImg() {
+  img.style.visibility = "hidden";
+}
+
+function showImg(){
+  console.log("showImg called")
+  img.style.visibility = "visible";
 }
 
 function changeImg() {
+  console.log("changeImg succesfully called")
   if (img.src == "https://thumbs.dreamstime.com/z/cyber-woman-orange-11363555.jpg" ) {
     img.src = "https://preview.redd.it/akiinn6djtd21.jpg?auto=webp&s=52cd4cd252e44b0c06e80d190edb032e39492a76";
   } else {
@@ -61,11 +68,33 @@ function changeBg() {
   }
 }
 
+function toggleVibes(){
+  console.log("toggleVibes called")
+  if( vibes.textContent == ""){
+    vibes.textContent = "Du kan klara allt"
+  }
+  else{
+    vibes.textContent = "";
+  };
+};
+
+function toggleTime(){
+  const time = document.getElementById("time")
+  console.log("Toggle time called")
+
+  if (time.textContent == ""){
+    time.textContent = new Date().toString();
+  }
+}
 function changeHeader() {
   const newHeader = prompt("Skriv in en ny rubrik");
   if (newHeader !== null && newHeader !== "") {
-    header.textContent = newHeader;
+    vibes.textContent = newHeader;
   }
+}
+
+function createHeader(){
+  header.style.alignItems
 }
 
 function removeHeader() {
