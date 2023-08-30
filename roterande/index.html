@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let grader = 5
+        const bild = document.getElementById("bld");
+
+        function bildKlick(){
+            grader = toString(grader)
+            const rotationStr = 'rotate(' + grader + 'deg)';
+            grader = parseInt(grader)
+            bild.style.transform = rotationStr ;
+            grader =+ 1
+
+
+        }
+        
+
+    </script>
+
+    <style>
+        #bld{
+            position: relative;
+            width: 500px;
+            height: 500px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="bld.png" id="bld" onclick="bildKlick()">
+</body>
+</html>

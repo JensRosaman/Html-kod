@@ -26,7 +26,7 @@
         function anropare(){
             let rotation = grader
             for(let i in Range(5)){
-                setTimeout(bildRotera(rotation),1000)
+                bildRotera(rotation)
                 rotation += 1
             }
 
@@ -34,7 +34,7 @@
         }
     </script>
     <div>
-        <img src="key.png" id="bild">¨
+        <img src="key.png" id="bild">
         <button onclick="anropare()">Klicka</button>
     </div>
 </body>
